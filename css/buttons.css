@@ -1,0 +1,87 @@
+.button{
+    background-color: #7b61ff;
+    border-radius: 10px;
+    color: #fff;
+    transition: background-color 0.2s ease-in;
+}
+
+.button:hover{
+    background-color: #7b61ff;
+}
+
+.button--huge{
+    padding: 25px;
+    font-size: 17px;
+    font-weight: 600;
+    background: #7b61ff;
+    color:#fff;
+    padding: 8px 19px;
+    transition: background-color 0.2s ease-in;
+}
+
+.button--huge:hover{
+    background: #bfb5f4;
+    color: #7b61ff;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+
+.button button--search{
+    width: 60px;
+    height: 60px;
+    padding: 18px;
+    size: 40px; 
+}
+
+/*button-more*/
+.button-more{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    height: 44px;
+    background: #d4ccf5;
+    border-radius: 12px;
+    font-size: 16px;
+    color: #5243c2;
+
+    transition: background-color 0.2s ease-in;
+}
+
+.button-more:hover{
+    background: #9683f7;
+}
+
+.button-moree{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    height: 44px;
+    background: #d4ccf5;
+    border-radius: 12px;
+    font-size: 16px;
+    color: #5243c2;
+
+    transition: background-color 0.2s ease-in;
+}
+
+.button-moree:hover{
+    background: #9683f7;
+
+}
+
+/* Gezinme düğmeleri */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff; /* İkon rengi */
+    background-color: rgba(0, 0, 0, 0.5); /* Arkaplan */
+    border-radius: 50%; /* Yuvarlak butonlar */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

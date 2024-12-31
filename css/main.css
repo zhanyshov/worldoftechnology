@@ -1,0 +1,704 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:300,regular,500,600);
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import "/site.projesi/css/reset.css";
+@import "/site.projesi/css/buttons.css";
+@import "/site.projesi/css/dropdown.css";
+@import "/site.projesi/css/mobile-nav.css";
+@import "/site.projesi/css/nav-icon.css";
+
+
+
+.body {
+    font-family: "Poppins", serif;
+    height: 100%;
+    color: #310db1;
+    overflow-y: auto;
+}
+
+html, body {
+    height: 100%;
+    font-family: "Poppins", serif;
+    background: linear-gradient(to right, #ffffff, #e0e0e0);
+}
+
+.Main-Container2 {
+    background-image: url('/site.projesi/img/web33.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: auto;
+    overflow: hidden;
+  }
+
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    object-fit: cover; 
+}
+
+.header__title {
+    font-weight: 700;
+    font-size: 64px; /* Daha büyük boyut */
+    line-height: 1.2;
+    color: white; /* Beyaz renk */
+    text-align: center;
+    position: absolute;
+    top: 30%; /* Daha yukarıda */
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fadeInSlide 3s ease-in-out; /* Yumuşak geçiş animasyonu */
+}
+
+
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px) translateX(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) translateX(-50%);
+    }
+}
+
+
+.header {
+    position: relative;
+    z-index: 1;
+    color: #FFF;
+    height: 100vh; 
+    min-height: 120vh;
+    overflow: hidden; 
+}
+
+.header a {
+    color: #fff;
+}
+
+.header .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%; 
+    object-fit: cover;
+    z-index: -1;
+}
+
+.main, .section {
+    position: relative;
+    z-index: 1; 
+    background: linear-gradient(to right, #ffffff, #e0e0e0);
+    padding: 20px;
+}
+
+
+.container{
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 0 32px;
+}
+
+.container--header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*nav*/
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+    
+}
+
+.logo{
+    flex-shrink: 0;
+}
+
+/*nav-list*/
+.nav-list{
+    display: flex;
+    column-gap: 54px;
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: capitalize;
+    
+}
+
+.nav-list__link{
+    opacity: 0.7;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #FFF;
+    padding: 10px 15px;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+    
+}
+.nav-list__link:hover {
+    color:  #7b61ff; 
+}
+
+.nav-list__link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color:  #7b61ff;
+    transition: width 0.3s ease;
+}
+
+.nav-list__link:hover::after {
+    width: 100%;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user__content {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-align: right;
+}
+
+.user__greeting {
+    font-size: 12px;
+    font-weight: 400;
+    color: #fff; 
+}
+
+.user__name {
+    font-size: 12px;
+    font-weight: bold;
+    color: #aaa; 
+}
+
+.user__avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.user__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*header content*/
+.header__content{
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    align-items: center;
+    text-align: center;
+    padding: 300px 200px;
+    
+
+}
+
+.header__title{
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 2;
+    
+}
+
+/*main*/
+.title-1{
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1, 5;
+    color: #161414;
+}
+
+.main{
+    padding: 120px 0;
+    display: grid;
+    gap: 120px;
+}
+
+.section__header{
+    margin-bottom: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section__cards{
+    display: grid;
+    gap: 32px;
+}
+
+.section__cards--populer {
+    grid-template-columns: repeat(5,1fr);
+}
+
+.section__cards--hotels {
+    grid-template-columns: repeat(4,1fr);
+}
+
+.section__cards--database {
+    grid-template-columns: repeat(2,1fr);
+}
+
+/*card*/
+.card{
+    position: relative;
+}
+
+.card--wide{
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    gap: 32px;
+}
+
+.card__link{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.card__img{
+    border-radius: 12px;
+    margin-bottom: 8px;
+}
+
+.card__img--hotel{
+    margin-bottom: 10px;
+}
+
+.card__img--no-margin{
+    margin: 0;
+}
+
+.card__title{
+    color: #161414;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.card__title--hotel{
+    margin-bottom: 12px;
+
+}
+
+.card__location{
+    position: relative;
+    color: #979797;
+    font-size: 13px;
+    z-index: 1;
+}
+
+.card__location:hover{
+    color: #7B61FF;
+}
+
+.card__footer {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.card__location--ikon{
+    padding-left: 20px;
+    background-repeat: no-repeat;
+    background-position: 1px 3px;
+    background-image: url(/site.projesi/img/web10.png);
+    background-size: 14px;
+    
+}
+/*VERITABANI*/
+.card__img--no-margin{
+    margin: 0;
+}
+
+.card__desc{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card__title--big{
+    color: #161414;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.card__text{
+    color: #5b5b5b;
+    font-size: 16px;
+    line-height: 2;
+}
+
+.card__footer-wide{
+    margin-top: auto;
+}
+
+.card__footer--link{
+    position: relative;
+    z-index: 1;
+    font-size: 17px;
+    color: #7b61ff;
+    padding-right: 25px;
+    background-repeat: no-repeat;
+    background-position: right 3px center;
+    background-image: url(/site.projesi/img/after.png);
+    background-size: 17px;
+}
+
+.card__footer--link:hover{
+    color: #3310de;
+    font-size: 18px;
+}
+
+/* Footer Styles */
+.site-footer {
+    background-color: #6772f1;
+    color: #fff;
+    padding: 0px 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    
+    
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 0;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin: 55px;
+    min-width: 200px;
+    justify-content: center; /* Yatayda ortalar */
+    align-items: center;
+    line-height: 25px;
+  }
+  
+  .footer-section h3 {
+    font-size: 18px;
+    background: #d4ccf5;
+    color: #5243c2;
+    border-radius: 12px;
+    padding-top: 30px;
+    padding-bottom: 2px;
+    transition: background-color 0.1s ease-in;
+  }
+
+  .footer-section h3:hover {
+    background-color: #bdb3f0;
+}
+  
+  .footer-section p,
+  .footer-section ul {
+    font-size: 14px;   
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-section ul li a:hover {
+    text-decoration: underline;
+    color: #7b61ff;
+  }
+
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #7B61FF;
+    padding-top: 10px;
+    font-size: 14px;
+  }
+
+  .footer-section div {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.footer-section div.active {
+    max-height: 500px; 
+    opacity: 1;
+}
+
+.toggle-icon {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+    display: block;
+    margin: 10px  auto 0;
+    animation: bounce 1s infinite ease-in-out;
+
+}
+
+.footer-section div.active ~ h3 .toggle-icon {
+    transform: rotate(180deg);
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); 
+    }
+}
+
+/*Auther: Abdelrhman Said*/
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877F2;
+  color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1DA1F2;
+  color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #e95950 ;
+  color: #ffffff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background: #333333;
+  color: #ffffff;
+}
+
+.wrapper .telegram:hover,
+.wrapper .telegram:hover .tooltip,
+.wrapper .telegram:hover .tooltip::before {
+  background: #229ED9;
+  color: #ffffff;
+}
+  
+.p {
+    color: white;
+  }
+
+.ikon-adres{
+    background-image: url(/site.projesi/img/adres.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding-left: 25px;
+    color: #b2a4f6;
+}
+ 
+.ikon-email{
+    background-image: url(/site.projesi/img/email.png);
+    background-size: 16px;
+    background-repeat: no-repeat;
+    padding-left: 25px;
+    color: #b2a4f6;
+}
+
+.ikon-numara{
+    background-image: url(/site.projesi/img/contact.png);
+    background-size: 16px;
+    background-repeat: no-repeat;
+    padding-left: 25px;
+    color: #b2a4f6;
+}
+
+/*сomments*/
+.сomments {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin-top: 50px;
+    animation: fadeInUp 1.5s ease-out;
+    position: relative;
+}
+
+.contact {
+    background-color: rgba(0, 0, 0, 0.3); 
+    color: white; 
+    padding: 20px 40px;
+    border-radius: 10px; 
+    text-align: center; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+}
+
+.contact-textt{
+    display: inline-block; 
+    color: #7b61ff; 
+    background-color: #c7bfee;
+    padding: 8px 17px; 
+    border-radius: 7px; 
+    font-size: 28px;
+    font-weight: 450; 
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transform: translateY(-50px);
+    opacity: 0;
+    animation: formSlideUp 0.8s ease-out 0.5s forwards;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.contact input:focus, .contact textarea:focus {
+    border-color: #7b61ff;
+    outline: none;
+}
+
+/* Buton Stili */
+.contact button {
+    background-color: #d4ccf5;
+    color: #5243c2;
+    border: none;
+    padding: 14px 32px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.contact button:hover {
+    background: #9683f7;
+    transform: translateY(-5px);
+}
+
+/* Animasyonlar */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes formSlideUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+
+
